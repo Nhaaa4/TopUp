@@ -14,7 +14,6 @@ const GameSelectionModal = ({ isOpen, onClose, onNext }) => {
 
   useEffect(() => {
     const fetchGames = async () => {
-        setError("Failed to load games. Using default game list instead.")
         setGames(fallbackGames)
         setLoading(false)
     }
