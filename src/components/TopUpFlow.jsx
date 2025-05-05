@@ -79,9 +79,6 @@ const TopUpFlow = ({ isOpen, onClose, initialStep = "game", gameId = null }) => 
     setCurrentStep(nextStep)
   }
 
-  useEffect(() => {
-    console.log("TopUpFlow render:", { isOpen, currentStep, gameId, initialized });
-  }, [currentStep]); // Only log when `currentStep` changes
   
 
   return (

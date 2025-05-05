@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={handleHomeClick}>
           <FaGamepad className="logo-icon" />
-          <span>GameTopUp</span>
+          <span>Coppsary Bok Luy</span>
         </Link>
 
         <div className="menu-icon" onClick={toggleMenu}>
