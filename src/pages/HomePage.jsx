@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react"
 import { FaGamepad, FaMoneyBillWave, FaShieldAlt, FaUserClock, FaHeadset, FaGift, FaStar, FaFire } from "react-icons/fa"
-import { getGames } from "../services/api"
 import TopUpFlow from "../components/TopUpFlow"
 import { useGameContext } from "../context/GameContext"
 import "./HomePage.css"
@@ -17,33 +16,33 @@ const HomePage = () => {
   const { isTopUpInProgress } = useGameContext()
 
   // Update the useEffect hook that fetches games to ensure all games are displayed
-  useEffect(() => {
-    const fetchGames = async () => {
-      try {
-        setLoading(true)
-        setError(null)
-        const gamesData = await getGames()
+  // useEffect(() => {
+  //   const fetchGames = async () => {
+  //     try {
+  //       setLoading(true)
+  //       setError(null)
+  //       const gamesData = await getGames()
 
-        if (gamesData && gamesData.length > 0) {
-          // Ensure we're getting all games from the API
-          console.log(`Fetched ${gamesData.length} games from API`)
-          setGames(gamesData)
-        } else {
-          // If API returns empty array, use fallback data
-          console.log("Using fallback game data")
-          setGames(getAllFallbackGames())
-        }
-      } catch (err) {
-        console.error("Error in HomePage:", err)
-        setError("Failed to load games. Using default game list instead.")
-        setGames(getAllFallbackGames())
-      } finally {
-        setLoading(false)
-      }
-    }
+  //       if (gamesData && gamesData.length > 0) {
+  //         // Ensure we're getting all games from the API
+  //         console.log(`Fetched ${gamesData.length} games from API`)
+  //         setGames(gamesData)
+  //       } else {
+  //         // If API returns empty array, use fallback data
+  //         console.log("Using fallback game data")
+  //         setGames(getAllFallbackGames())
+  //       }
+  //     } catch (err) {
+  //       console.error("Error in HomePage:", err)
+  //       setError("Failed to load games. Using default game list instead.")
+  //       setGames(getAllFallbackGames())
+  //     } finally {
+  //       setLoading(false)
+  //     }
+  //   }
 
-    fetchGames()
-  }, [])
+  //   fetchGames()
+  // }, [])
 
   // Updated fallback games function to ensure all games are included
   const getAllFallbackGames = () => {
@@ -60,6 +59,10 @@ const HomePage = () => {
 
   // Use the updated fallback games function
   const fallbackGames = getAllFallbackGames()
+  useEffect(() => {
+    setGames(fallbackGames)
+    setLoading(false)
+  }, [fallbackGames])
 
   // Featured games - could be from an API in a real app
   const featuredGames = [

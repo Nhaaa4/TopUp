@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { FaCoins, FaArrowLeft } from "react-icons/fa"
-import { getGamePackages } from "../../services/api"
 import { useGameContext } from "../../context/GameContext"
 import Modal from "../Modal"
 import "./PackageSelectionModal.css"
@@ -17,36 +16,11 @@ const PackageSelectionModal = ({ isOpen, onClose, onBack, onNext }) => {
 
   useEffect(() => {
     const fetchGameData = async () => {
-      if (!selectedGame) return
-
-      try {
-        setLoading(true)
-        setError(null)
-
-        // Fetch game packages from API
-        const packagesData = await getGamePackages(selectedGame.id)
-
-        if (packagesData.gameInfo && packagesData.packages && packagesData.packages.length > 0) {
-          setPackages(packagesData.packages)
-          setGameInfo(packagesData.gameInfo)
-        } else {
-          console.log("Using fallback data for game:", selectedGame.id)
-          // Use fallback data if API fails or returns empty data
-          const fallbackData = getFallbackPackages(selectedGame.id)
-          setPackages(fallbackData.packages)
-          setGameInfo(fallbackData.gameInfo)
-        }
-      } catch (err) {
-        console.error("Error in PackageSelectionModal:", err)
-        setError("Failed to load game packages. Using default packages instead.")
-
         // Use fallback data if API fails
         const fallbackData = getFallbackPackages(selectedGame.id)
         setPackages(fallbackData.packages)
         setGameInfo(fallbackData.gameInfo)
-      } finally {
         setLoading(false)
-      }
     }
 
     if (isOpen && selectedGame) {

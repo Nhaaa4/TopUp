@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { FaGamepad } from "react-icons/fa"
-import { getGames } from "../../services/api"
 import { useGameContext } from "../../context/GameContext"
 import Modal from "../Modal"
 import "./GameSelectionModal.css"
@@ -15,25 +14,9 @@ const GameSelectionModal = ({ isOpen, onClose, onNext }) => {
 
   useEffect(() => {
     const fetchGames = async () => {
-      try {
-        setLoading(true)
-        setError(null)
-        const gamesData = await getGames()
-
-        if (gamesData && gamesData.length > 0) {
-          setGames(gamesData)
-        } else {
-          // If API returns empty array, use fallback data
-          console.log("Using fallback game data")
-          setGames(fallbackGames)
-        }
-      } catch (err) {
-        console.error("Error in GameSelectionModal:", err)
         setError("Failed to load games. Using default game list instead.")
         setGames(fallbackGames)
-      } finally {
         setLoading(false)
-      }
     }
 
     if (isOpen) {
