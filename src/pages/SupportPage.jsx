@@ -110,7 +110,7 @@ const SupportPage = () => {
                 </div>
                 <div className="contact-details">
                   <h3>Email</h3>
-                  <p>support@gametopup.com</p>
+                  <p>coppsary@gmail.com</p>
                   <p>We'll respond within 24 hours</p>
                 </div>
               </div>

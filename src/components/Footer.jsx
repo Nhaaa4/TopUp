@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-section">
           <div className="footer-logo">
             <FaGamepad className="footer-logo-icon" />
-            <span>GameTopUp</span>
+            <span>Coppsary Bok luy</span>
           </div>
           <p className="footer-description">
             The fastest and most reliable game top-up service in Cambodia. Get your game credits instantly at the best
@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} GameTopUp. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Coppsary. All Rights Reserved.</p>
       </div>
     </footer>
   )
