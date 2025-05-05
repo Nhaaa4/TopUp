@@ -1,0 +1,144 @@
+.promotion-banner {
+  background: linear-gradient(90deg, #ff4e50, #f9d423);
+  color: #fff;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.promotion-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.promotion-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.promotion-icon {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.promotion-text {
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.promotion-text p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.promotion-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #fff;
+  color: #ff4e50;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.promotion-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.promotion-button:hover .button-arrow {
+  transform: translateX(3px);
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.close-button:hover {
+  transform: rotate(90deg);
+}
+
+.promotion-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.indicator-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator-dot.active {
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .promotion-content {
+    flex-direction: column;
+    padding: 5px 0;
+    gap: 10px;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  .promotion-indicator {
+    margin-top: 5px;
+  }
+}

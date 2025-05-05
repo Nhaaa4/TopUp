@@ -1,0 +1,209 @@
+.top-up-page {
+  padding: 30px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Game Info Section */
+.game-info-section {
+  margin-bottom: 30px;
+}
+
+.game-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+.game-image {
+  flex: 0 0 180px;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.game-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-details {
+  flex: 1;
+  min-width: 280px;
+}
+
+.game-details h1 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #1a1a2e;
+}
+
+.game-details p {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.info-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background-color: #f0f7ff;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid #4cc9f0;
+}
+
+.info-icon {
+  color: #4cc9f0;
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Packages Section */
+.packages-section {
+  margin-bottom: 40px;
+}
+
+.packages-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #1a1a2e;
+  text-align: center;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.package-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  padding: 20px 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.package-icon {
+  font-size: 1.8rem;
+  color: #4cc9f0;
+  margin-bottom: 12px;
+}
+
+.package-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.package-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1a1a2e;
+}
+
+/* Instructions Section */
+.instructions-section {
+  margin-bottom: 30px;
+}
+
+.instructions-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #1a1a2e;
+  text-align: center;
+}
+
+.instructions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.instruction-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.step-number {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(90deg, #4cc9f0 0%, #4361ee 100%);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.instruction-step p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .game-info-container {
+    flex-direction: column;
+  }
+
+  .game-image {
+    width: 100%;
+    max-width: none;
+    height: 160px;
+  }
+
+  .game-details h1 {
+    font-size: 1.5rem;
+  }
+
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .package-icon {
+    font-size: 1.6rem;
+  }
+
+  .package-card h3 {
+    font-size: 1rem;
+  }
+
+  .package-price {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+}

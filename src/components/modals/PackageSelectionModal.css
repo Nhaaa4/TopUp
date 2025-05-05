@@ -1,0 +1,119 @@
+.package-selection-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.game-info-box {
+  display: flex;
+  gap: 12px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.game-info-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.game-info-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-info-details h3 {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+}
+
+.game-info-details p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.packages-title {
+  margin: 0;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.package-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.package-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  border-color: #4cc9f0;
+}
+
+.package-icon {
+  font-size: 1.3rem;
+  color: #4cc9f0;
+  margin-bottom: 8px;
+}
+
+.package-card h3 {
+  font-size: 0.85rem;
+  margin: 0 0 8px 0;
+}
+
+.package-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1a1a2e;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.back-button:hover {
+  background-color: #e0e0e0;
+}
+
+@media screen and (max-width: 480px) {
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,261 @@
+.payment-page {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.payment-container {
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+.payment-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #1a1a2e;
+  text-align: center;
+}
+
+/* Order Summary */
+.order-summary {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.order-summary h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #1a1a2e;
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-item span:first-child {
+  font-weight: 500;
+  color: #666;
+}
+
+.summary-item span:last-child {
+  font-weight: 600;
+}
+
+.summary-item.total {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.summary-item.total span {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.summary-item.total span:last-child {
+  color: #4361ee;
+}
+
+/* Error Alert */
+.error-alert {
+  background-color: #ffebee;
+  color: #e53935;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Payment Methods */
+.payment-methods {
+  margin-bottom: 25px;
+}
+
+.payment-methods h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #1a1a2e;
+}
+
+.payment-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.payment-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.payment-option:hover {
+  border-color: #4cc9f0;
+}
+
+.payment-option.selected {
+  border-color: #4cc9f0;
+  background-color: #f0f9ff;
+}
+
+.payment-icon {
+  font-size: 1.8rem;
+  color: #4361ee;
+}
+
+.selected-indicator {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #4cc9f0;
+  color: #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Payment Action */
+.payment-action {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.generate-qr-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #4cc9f0 0%, #4361ee 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.generate-qr-button:hover {
+  background: linear-gradient(90deg, #4361ee 0%, #4cc9f0 100%);
+}
+
+.generate-qr-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* QR Code Section */
+.qr-code-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.qr-code-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #1a1a2e;
+}
+
+.qr-code-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.qr-code-container img {
+  max-width: 200px;
+  height: auto;
+}
+
+.payment-instructions {
+  background-color: #f0f9ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.payment-instructions p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.order-id {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.confirm-payment-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #4caf50 0%, #2e7d32 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.confirm-payment-button:hover {
+  background: linear-gradient(90deg, #2e7d32 0%, #4caf50 100%);
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.back-button:hover {
+  background-color: #e0e0e0;
+}
+
+.back-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
