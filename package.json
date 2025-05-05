@@ -4,10 +4,7 @@
   "description": "Game Top-Up Web Application",
   "type": "module",
   "scripts": {
-    "start": "node server/server.js",
-    "server": "nodemon server/server.js",
-    "client": "vite",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
