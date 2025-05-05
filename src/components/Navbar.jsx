@@ -24,6 +24,8 @@ const Navbar = () => {
     window.scrollTo(0, 0)
   }
 
+  
+
   return (
     <nav className="navbar">
       <div className="navbar-container">

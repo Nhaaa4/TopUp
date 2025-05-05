@@ -1,8 +1,22 @@
-import { Link } from "react-router-dom"
-import { FaFacebook, FaTelegram, FaInstagram, FaGamepad } from "react-icons/fa"
+
+import { Link, useNavigate } from "react-router-dom"
+import { FaFacebook, FaTelegram, FaInstagram, FaGamepad, FaDiscord, FaTiktok } from "react-icons/fa"
 import "./Footer.css"
 
+
 const Footer = () => {
+  const navigate = useNavigate()
+
+const handleHomeClickf = (e) => {
+  e.preventDefault()
+  if (window.location.pathname === "/") {
+    window.scrollTo(0, 0)
+  } else {
+    navigate("/")
+  }
+  
+  window.scrollTo(0, 0)
+}
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -16,14 +30,14 @@ const Footer = () => {
             prices.
           </p>
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://web.facebook.com/profile.php?id=61567582710788" target="_blank" rel="noopener noreferrer">
               <FaFacebook />
             </a>
-            <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">
-              <FaTelegram />
+            <a href="https://discord.gg/Z396cHUP7G" target="_blank" rel="noopener noreferrer">
+              <FaDiscord />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <FaInstagram />
+            <a href="https://www.tiktok.com/@coppsary" target="_blank" rel="noopener noreferrer">
+              <FaTiktok />
             </a>
           </div>
         </div>
@@ -32,16 +46,16 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <ul className="footer-links">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={handleHomeClickf}>Home</Link>
             </li>
             <li>
-              <a href="#games">Games</a>
+              <a href="/#games">Games</a>
             </li>
             <li>
-              <a href="#how-it-works">How It Works</a>
+              <a href="/#how-it-works">How It Works</a>
             </li>
             <li>
-              <a href="#why-us">Why Us</a>
+              <a href="/#why-us">Why Us</a>
             </li>
             <li>
               <Link to="/support">Support</Link>
@@ -50,28 +64,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-section">
-          <h3>Games</h3>
-          <ul className="footer-links">
-            <li>
-              <Link to="/topup/mobile-legends">Mobile Legends</Link>
-            </li>
-            <li>
-              <Link to="/topup/pubg-mobile">PUBG Mobile</Link>
-            </li>
-            <li>
-              <Link to="/topup/call-of-duty-mobile">Call of Duty Mobile</Link>
-            </li>
-            <li>
-              <Link to="/topup/free-fire">Free Fire</Link>
-            </li>
-            <li>
-              <Link to="/topup/clash-of-clans">Clash of Clans</Link>
-            </li>
-          </ul>
-        </div>
-
-        <div className="footer-section">
-          <h3>Support</h3>
+        <h3>Support</h3>
           <ul className="footer-links">
             <li>
               <Link to="/support">Contact Us</Link>

@@ -4,7 +4,10 @@ import { useState } from "react"
 import { FaPaperPlane, FaPhone, FaEnvelope, FaComments } from "react-icons/fa"
 import "./SupportPage.css"
 
+
+
 const SupportPage = () => {
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -82,7 +85,7 @@ const SupportPage = () => {
   }
 
   return (
-    <div className="support-page">
+    <div className="support-page" id="support">
       <div className="support-container">
         <div className="support-header">
           <h1>Customer Support</h1>

@@ -16,11 +16,11 @@ const PackageSelectionModal = ({ isOpen, onClose, onBack, onNext }) => {
 
   useEffect(() => {
     const fetchGameData = async () => {
-        // Use fallback data if API fails
-        const fallbackData = getFallbackPackages(selectedGame.id)
-        setPackages(fallbackData.packages)
-        setGameInfo(fallbackData.gameInfo)
-        setLoading(false)
+      // Use fallback data if API fails
+      const fallbackData = getFallbackPackages(selectedGame.id)
+      setPackages(fallbackData.packages)
+      setGameInfo(fallbackData.gameInfo)
+      setLoading(false)
     }
 
     if (isOpen && selectedGame) {
@@ -70,6 +70,19 @@ const PackageSelectionModal = ({ isOpen, onClose, onBack, onNext }) => {
         image: "/images/league-of-legends.jpg",
         description: "League of Legends is a team-based strategy game developed and published by Riot Games.",
       },
+      "pubg-mobile": {
+        name: "PUBG Mobile",
+        currency: "UC (Unknown Cash)",
+        image: "/images/pubg-mobile.jpg",
+        description: "PUBG Mobile is a battle royale game where players fight to be the last one standing, developed by PUBG Corporation.",
+      },
+      "call-of-duty-mobile": {
+        name: "Call of Duty Mobile",
+        currency: "CP (COD Points)",
+        image: "/images/call-of-duty-mobile.jpg",
+        description: "Call of Duty Mobile is a first-person shooter featuring multiplayer and battle royale modes, developed by TiMi Studios and published by Activision.",
+      },
+
     }
 
     return (
