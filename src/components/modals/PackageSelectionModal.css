@@ -50,7 +50,7 @@
 
 .packages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 12px;
 }
 
@@ -80,6 +80,7 @@
 .package-card h3 {
   font-size: 0.85rem;
   margin: 0 0 8px 0;
+  white-space: nowrap;
 }
 
 .package-price {
