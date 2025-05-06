@@ -366,7 +366,7 @@ const HomePage = () => {
         <div className="cta-content">
           <h2>Ready to Top Up Your Game?</h2>
           <p>Get started now and enjoy your game with extra credits</p>
-          <button onClick={() => openTopUpModal()} className="cta-button">
+          <button onClick={scrollToFeaturedGames} className="cta-button">
             Top Up Now
           </button>
         </div>
